@@ -1,0 +1,24 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #181111;
+	//font-family: 'Manrope Variable', sans-serif;
+}
+
+h1,h2,h3,h4,li {
+    font-family: 'VT323', monospace;
+    font-weight: normal;
+    color: #FFD6CEFB;
+}
+
+
+a,p,text,label {
+    font-family: 'VT323', monospace;
+    padding-left: 10pt;
+    color: #FF977D;
+}
