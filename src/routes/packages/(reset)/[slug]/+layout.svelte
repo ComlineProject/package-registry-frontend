@@ -1,20 +1,12 @@
 <script lang="ts">
-	import HeaderBar from "$lib/components/HeaderBar.svelte";
     import "/src/styles/global.css"
 
-    let searchInput: HTMLInputElement;
-
-    function onKeyPress(event: KeyboardEvent) {
-        if (event.key == "s") {
-            searchInput.focus()
-        }
-    }
+    import HeaderBar from "$lib/components/HeaderBar.svelte";
 </script>
 
 
 <header>
     <HeaderBar/>
-    <!--<input bind:this={searchInput} placeholder="Search for a package (press [S] key to focus)"/>-->
 </header>
 
 <body>
@@ -22,10 +14,7 @@
 </body>
 
 <footer>
-
 </footer>
-
-<svelte:window on:keydown={(e) => onKeyPress}/>
 
 
 <style>
@@ -34,17 +23,18 @@
         margin-top: 1pt;
         margin-bottom: 1pt;
         justify-content: center;
-        height: 300px;
+        height: 100px;
 
         background-color: #FF6847EB;
         
         border-style: ridge;
         border-color: #614A39;
     }
+
     body {
         display: flex;
         flex-direction: column;
-        height: calc(300vh - 300px);
+        height: calc(100vh - 100px);
         background-color: #181111;
     }
 </style>

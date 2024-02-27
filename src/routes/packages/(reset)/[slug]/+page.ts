@@ -7,7 +7,7 @@ export const load = ({ params }) => {
         namespace: "comline-test",
         name: "Test",
         current_version: "0.1.0",
-        description: "A test package",
+        description: "# Test Package\nA test package",
         owners: ["Comline", "Comline Test"],
         licenses: "MIT",
         docsUrl: "localhost:8080/docs/comline-test/test",

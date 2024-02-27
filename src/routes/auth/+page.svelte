@@ -1,5 +1,5 @@
 <script lang="ts">
-    import "../../styles/global.css"
+    import "/src/styles/global.css"
 
     const authMethods: AuthMethod[] = [
         { id: "gitlab_oidc", name: "GitLab", description: "GitLab OpenID Connect" },
