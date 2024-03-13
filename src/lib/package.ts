@@ -1,11 +1,5 @@
 
-interface AuthMethod {
-    id: string
-    name: string
-    description: string   
-}
-
-interface PackageMeta {
+export interface PackageMeta {
     id: string
     namespace: string
     name: string
@@ -22,6 +16,6 @@ interface PackageMeta {
     categories: string[]
 }
 
-interface PackageStats {
+export interface PackageStats {
     id: string
 }

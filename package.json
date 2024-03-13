@@ -2,6 +2,7 @@
 	"name": "package-registry-frontend",
 	"version": "0.0.1",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -31,7 +32,6 @@
 		"vite": "^5.0.3",
 		"vitest": "^1.2.0"
 	},
-	"type": "module",
 	"dependencies": {
 		"svelte-markdown": "^0.4.1"
 	}

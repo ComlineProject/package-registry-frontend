@@ -1,12 +1,17 @@
 <script lang="ts">
+    // Ordered Imports
     import "/src/styles/global.css"
 
-    import HeaderBar from "$lib/components/HeaderBar.svelte";
+    // Local Imports
+    import HeaderBar from "$lib/components/HeaderBar.svelte"
+
+
+    export let data;
 </script>
 
 
 <header>
-    <HeaderBar/>
+    <HeaderBar user={data.user}/>
 </header>
 
 <body>
@@ -23,7 +28,7 @@
         margin-top: 1pt;
         margin-bottom: 1pt;
         justify-content: center;
-        height: 100px;
+        height: 130px;
 
         background-color: #FF6847EB;
         

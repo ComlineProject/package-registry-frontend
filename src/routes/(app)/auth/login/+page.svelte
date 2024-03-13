@@ -1,26 +1,24 @@
 <script lang="ts">
     import "/src/styles/global.css"
 
-    const authMethods: AuthMethod[] = [
-        { id: "gitlab_oidc", name: "GitLab", description: "GitLab OpenID Connect" },
-        { id: "github_oidc", name: "GitHub", description: "GitHub OpenID Connect" },
-    ]
+    export let data;
+    const authMethods = data.authMethods;
+
     const authMethodsIcons = [
         { 
             id: "gitlab_oidc",
-            logo_white: "/images/github/github-mark/github-mark-white.svg",
-            logo_dark: "/images/github/github-mark/github-mark.svg",
+            logo_white: "/images/github/github-mark/light.svg",
+            logo_dark: "/images/github/github-mark/dark.svg",
         },
         { 
             id: "github_oidc",
-            logo_white: "/images/github/github-mark/github-mark-white.svg",
-            logo_dark: "/images/github/github-mark/github-mark.svg",
+            logo_white: "/images/gitlab/logo/neutral.svg",
+            logo_dark: "/images/gitlab/logo/neutral.svg",
         },
     ]
 
     function methodIcon(id: string): string {
         let url = authMethodsIcons.filter(p => p.id == id)[0].logo_dark
-        console.log(url)
 
         return url
     }

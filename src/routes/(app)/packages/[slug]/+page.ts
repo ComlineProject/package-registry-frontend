@@ -1,4 +1,5 @@
 // Local Imports
+import type { PackageMeta } from "$lib/package"
 
 
 export const load = ({ params }) => {
@@ -11,7 +12,7 @@ export const load = ({ params }) => {
         owners: ["Comline", "Comline Test"],
         licenses: "MIT",
         docsUrl: "localhost:8080/docs/comline-test/test",
-        repositoryUrl: "localhost:8080/repos/comline-test/test",
+        repositoryUrl: new URL("localhost:8080/repos/comline-test/test"),
         lastUpdate: new Date(),
         tags: ["test", "test-package"],
         categories: ["Tests"]
