@@ -1,45 +1,45 @@
 <script lang="ts">
-    // Ordered Imports
-    import "/src/styles/global.css"
+	// Ordered Imports
+	import '/src/styles/global.css';
 
-    // Local Imports
-    import HeaderBar from "$lib/components/HeaderBar.svelte"
+	// Local Imports
+	import HeaderBar from '$lib/components/HeaderBar.svelte';
+	import type { User } from '$lib/user/user';
+	import type { Snippet } from 'svelte';
 
-
-    export let data;
+	// This layout uses the `@` reset, so it has no load function of its own;
+	// `user` is only present once a loader is added for this branch.
+	let { data, children }: { data: { user?: User }; children: Snippet } = $props();
 </script>
 
-
 <header>
-    <HeaderBar user={data.user}/>
+	<HeaderBar user={data.user} />
 </header>
 
-<body>
-    <slot/>
-</body>
+<div class="content">
+	{@render children()}
+</div>
 
-<footer>
-</footer>
-
+<footer></footer>
 
 <style>
-    header {
-        display: flex;
-        margin-top: 1pt;
-        margin-bottom: 1pt;
-        justify-content: center;
-        height: 130px;
+	header {
+		display: flex;
+		margin-top: 1pt;
+		margin-bottom: 1pt;
+		justify-content: center;
+		height: 130px;
 
-        background-color: #FF6847EB;
-        
-        border-style: ridge;
-        border-color: #614A39;
-    }
+		background-color: #ff6847eb;
 
-    body {
-        display: flex;
-        flex-direction: column;
-        height: calc(100vh - 100px);
-        background-color: #181111;
-    }
+		border-style: ridge;
+		border-color: #614a39;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 100px);
+		background-color: #181111;
+	}
 </style>
